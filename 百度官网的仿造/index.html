@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-decoration: none;
+            color: #000000;
+        }
+        body,html{
+            overflow: hidden;
+        }
+        header{
+            width: 1250px;
+            height:  60px;
+            min-width: 1250px;
+            width: 100%;
+            display: flex;
+        }
+
+        #nav ul{
+            display: flex;
+            flex: 0.5;
+        }
+
+        #nav ul li{
+            margin: 0 21px;
+            height: 60px;
+            text-align: center;
+        }
+
+        #nav ul li a{
+            line-height: 60px;
+            font-size: 13px;
+        }
+
+        #nav ul:last-child{
+            justify-content: flex-end;
+        }
+
+        #nav ul:last-child li:first-child a{
+            color: #fe0000;
+        }
+
+        #nav ul:last-child li:last-child a{
+            padding: 4px 12px;
+            border-radius: 6px;
+            background: #4E71F2;
+            color: #ffffff;
+
+        }
+
+        #searchBox {
+            align-items: center;
+            min-width: 1250px;
+            display: flex;
+            flex-direction: column;
+        }
+        #searchBox div:first-child img{
+            width:  270px;
+            height: 129px;
+            display: block;
+        }
+
+        #searchBox div:nth-child(2){
+            margin-top: 20px;
+            top:280px
+        }
+
+        #searchBox div:nth-child(2) div{
+            border-radius: 12px 0px 0px 12px;
+            border: 2px solid #A7AAB5;
+            padding: 10px 15px;
+            border-right: none;
+            display: inline-flex;
+        }
+
+        #searchBox div:nth-child(2) div input{
+            height: 24px;
+            width: 548px;
+        }
+
+
+        #searchBox div:nth-child(2)>input{
+            border-radius: 0px 12px 12px 0px;
+            width: 108px;
+            border: none;
+            background: #4E6EF2;
+            color: #ffffff;
+            font-size: 18px;
+            height: 48px;
+            float: right;
+        }
+
+        #searchBox>ul{
+            margin-top: 15px;
+            display: inline-flex;
+        }
+
+        #searchBox>ul li{
+            margin: 0  10px;
+            text-align: center;
+            line-height: 50px;
+        }
+        #searchBox>ul li:nth-child(even){
+            color: #DADDE2;
+            font-size: 30px;
+        }
+        #searchBox>ul li:nth-child(odd){
+            font-size: 13px;
+            color: #000000;
+        }
+        #searchBox div:last-child{
+            display: inline-flex;
+            width: 690px;
+        }
+
+        #searchBox div ul{
+            flex: 0.5;
+        }
+        #searchBox div ul li{
+            margin-top: 20px;
+        }
+        #searchBox div ul li a{
+              font-size: 16px;
+          }
+        #searchBox div ul:first-child li:nth-child(1){
+            background: url("./image/hot.png") no-repeat right 100px center;
+        }
+
+        #searchBox div ul:first-child li:nth-child(1) a{
+            background: url("./image/bj1.png") no-repeat;
+        }
+        #searchBox div ul:first-child li:nth-child(2) a{
+            background: url("./image/bj.png") no-repeat;
+        }
+        #searchBox div ul:first-child li:nth-child(3) a{
+            background: url("./image/bj3.png") no-repeat;
+        }
+
+        #searchBox div ul li span{
+            color: #ffffff;
+            margin: 0 5px;
+        }
+
+        #searchBox div ul:nth-child(2) li span{
+            color: #000000;
+            margin: 0 5px;
+        }
+
+        footer{
+            display: flex;
+            height: 60px;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            background-color: #FAFAFA;
+            width: 100%;
+            min-width: 1250px;
+        }
+        footer ul, footer p{
+            flex: 0.5;
+        }
+
+        footer ul{
+            display: inline-flex;
+        }
+        footer ul li{
+            margin: 0 10px;
+        }
+        footer ul li a{
+            line-height: 60px;
+            font-size: 13px;
+            color: #9195A3;
+        }
+        footer  p{
+            white-space: nowrap;
+            line-height: 60px;
+            font-size: 13px;
+            color: #BBBBBB;
+            text-align: right;
+        }
+
+        /* 设置search框样式
+            1.因为
+            */
+        .search{
+          -webkit-appearance: textfield;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header id="nav">
+        <ul>
+            <li>
+                <a>首页</a>
+            </li>
+            <li>
+                <a>hao123</a>
+            </li>
+            <li>
+                <a>地图</a>
+            </li>
+            <li>
+                <a>视频贴吧</a>
+            </li>
+            <li>
+                <a>学术</a>
+            </li>
+            <li>
+                <a>更多</a>
+            </li>
+        </ul>
+        <ul>
+            <li><a>高考加油</a></li>
+            <li><a>设置</a></li>
+            <li><a>登录</a></li>
+        </ul>
+    </header>
+
+
+
+    <div id="searchBox">
+        <div>
+        <img src="./image/baidu.gif"/>
+        </div>
+
+        <div >
+            <div>
+            <input class="search" type="search" />
+             </div>
+            <input name="btn1" type="button" value="百度一下">
+        </div>
+        <ul id="">
+            <li><a href="#">闪电作文</a>
+            <li>·
+            <li><a href="#">高考作文</a>
+            <li>·
+            <li><a href="#">高考真题</a>
+            <li>·
+            <li><a href="#">高考大数据</a>
+        </ul>
+        <div>
+            <ul>
+                <li><a><span>1</span>不会游泳的法警救起六名学生</a></li>
+                <li><a><span>2</span>不会游泳的法警救起六名学生</a></li>
+                <li><a><span>3</span>不会游泳的法警救起六名学生</a></li>
+            </ul>
+            <ul>
+                <li><a><span>4</span>不会游泳的法警救起六名学生</a></li>
+                <li><a><span>5</span>不会游泳的法警救起六名学生</a></li>
+                <li><a><span>6</span>不会游泳的法警救起六名学生</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">设为首页</a>
+            <li><a href="#">关于百度</a>
+            <li><a href="#">About Baidu</a>
+            <li><a href="#">百度营销</a>
+            <li><a href="#">使用百度前必读</a>
+            <li><a href="#">意见反馈</a>
+            <li><a href="#">帮助中心</a>
+        </ul>
+        <p>
+            &copy;2020&nbsp;&nbsp;Baidu&nbsp;&nbsp;(京)-经营性-2017-0020京公网安备11000002000001号京ICP证030173号
+        </p>
+    </footer>
+
+</body>
+<script type="text/javascript" src="./JS/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./JS/js.js"></script>
+</html>
