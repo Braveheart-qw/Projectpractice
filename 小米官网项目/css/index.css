@@ -75,10 +75,14 @@
     margin: 0 10px;
 }
 .nav ul li a{
-    line-height: 100px;
-    color: #333333;
-}
+     line-height: 100px;
+     color: #333333;
 
+}
+.nav ul li a:hover{
+    color: #ff6700;
+
+}
 .nav div:last-child{
     margin: auto 0;
     margin-left: 180px;
@@ -91,28 +95,27 @@
 }
 
 .hide_array div{
-    width: 1226px;
+
     /*鼠标移入高度从0 =》 229px*/
+    width: 100%;
+
     height: 0px;
     position: absolute;
-    left: 50%;
-    margin-left: -633px;
-    z-index: 1;
+    z-index: 2;
     border-top: 1px solid #e0e0e0;
     background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0,0,0,.18);
 
 }
 .hide_array div ul{
     margin: auto 0;
     display: flex;
-    border: 1px solid;
     height: 100%;
     align-items: center;
     justify-content: space-around;
 
 }
 .hide_array div ul li{
-   border: 1px solid;
 
 }
 /*轮播区域*/
@@ -127,9 +130,17 @@
     width: 1226px;
     height: 460px;
     position: absolute;
-    background-color: #4E6EF2;
 }
-.slideshow ul:nth-child(2){
+/*为后期js添加按钮做好准备样式工作*/
+.slideshow>ul:nth-child(2){
+    display: flex;
+    position: absolute;
+            right: 0;
+            bottom: 0;
+    margin: 0 5px 5px 0;
+}
+
+.slideshow>ul:nth-child(3){
     height: 420px;
     padding: 20px 0;
     width: 234px;
@@ -137,7 +148,7 @@
     z-index: 1;
     background-color: rgba(105,101,101,.6);
 }
-.slideshow ul:nth-child(2) li a{
+.slideshow ul:nth-child(3) li a{
     display: block;
     width: 174px;
     height: 42px;
@@ -147,8 +158,11 @@
     background-color: rgba(0,0,0,0);
 }
 .slideshow>div{
-    width: 992px;
-    height: 100%;
+    /*0 => 992px
+    也可以到892px*/
+
+    width: 0px;
+    height: 0%;
     background-color: #ffffff;
     position: absolute;
     right: 0;
@@ -156,7 +170,7 @@
     display: none;
     box-shadow: 3px 3px 3px #888888;
 }
-.slideshow ul:nth-child(2) li a:hover{
+.slideshow ul:nth-child(3) li a:hover{
   background-color: #ff6700;
 }
 
@@ -316,8 +330,9 @@
     height: 100%;
     justify-content: space-between;
     width: 977px;
+    transition: 2s;
     /*js 使用margin 或者transform：translate进行位移    */
-    /*transform: translateX(-977px);*/
+    /*transform: translateX(-997px);*/
 
 }
 .footer>div:nth-child(2) div:last-child ul li{
@@ -694,20 +709,25 @@ hr{
 }
 
 .ad>ul:last-child>li>a{
-    display: block;
-    text-align: center;
-    width: 120px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 13px;
-    border: 1px solid #ff6700;
-    color: #ff6700;
-    margin: 0 auto;
+     display: block;
+     text-align: center;
+     width: 120px;
+     height: 30px;
+     line-height: 30px;
+     font-size: 13px;
+     border: 1px solid #ff6700;
+     color: #ff6700;
+     margin: 0 auto;
+ }
+.ad>ul:last-child>li>a:hover{
+     background-color: #ff6700;
+    color: #ffffff;
+    transition: 0.3s;
 }
+
 .ad>ul:last-child>li>a>span {
     font-size: 18px;
 }
-
 .ad_li{
     display: flex;
     height: 100%;
@@ -799,6 +819,7 @@ hr{
 /*
 细节
 */
+/*购物车菜单的设置*/
 .xi_first a{
     display: block;
     width: 120px;
@@ -806,8 +827,9 @@ hr{
     line-height: 40px;
     text-align: center;
     margin-left: 20px;
-    transition: 0.3s background-color;
+    background-color: rgba(176,176,176,.3);
 }
+
 /*所有名称为img_hover的元素都在这里处理盒子阴影效果*/
 .img_hover:hover{
     transition: 0.5s linear;
