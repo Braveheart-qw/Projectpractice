@@ -63,12 +63,13 @@ define(['jquery'] , function ($) {
                                  went = $('.slideshow>ul:nth-child(2) li input').index(this);
                                  play(imgAnimate ,current , went);
                             })
-
+                        //自动播放时间
+                             auto_time();
                         },
 
                         /*轮播特效已经制作完毕*/
 
-                        //nav下的隐藏区域
+
 
 
                     error : function () {
@@ -122,7 +123,24 @@ define(['jquery'] , function ($) {
 
         }
 
+        //自动更新系统时间函数
+        function auto_time(){
 
+
+            setInterval(function () {
+                //    获取时分秒
+                var date = new Date();
+                var hh = date.getHours()> 10 ? date.getHours():"0"+date.getHours();
+                var mm = date.getMinutes() > 10 ? date.getMinutes():"0"+date.getMinutes();
+                var ss = date.getSeconds() > 10 ? date.getSeconds():"0"+date.getSeconds();
+                $('.hh').html(hh);
+                $('.mm').html(mm);
+                $('.ss').html(ss);
+                console.log("??");
+            } , 1000);
+
+
+        }
         return {
             start: start
         }
