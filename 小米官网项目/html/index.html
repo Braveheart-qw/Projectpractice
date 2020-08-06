@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>小米商城</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" type="text/css"  href="../css/index.css" />
+    <script>
+
+    </script>
+    <!--导入requireJS的AMD框架-->
+    <script type="text/javascript" src="../js/require.js" defer async="true"  data-main="../js/main"></script>
 </head>
 <body>
         <!--头部-->
@@ -37,7 +47,7 @@
          <ul>
             <li><a href="#">登录</a></li>
              <span>|</span>
-             <li><a href="#">注册</a></li>
+             <li><a href="#"  data-toggle="modal" data-target="#register">注册</a></li>
              <span>|</span>
              <li><a href="#">消息通知</a></li>
              <li class="xi_first">
@@ -71,7 +81,7 @@
         <!--搜索框        -->
         <div>
             <input type="search" placeholder="家电">
-            <input type="submit" >
+            <input type="submit" value="提交" >
         </div>
     </div>
 
@@ -132,6 +142,11 @@
                 并且使用jquery插入含有图片信息的li标签
                 -->
             </ul>
+
+            <ul class="slideshow_btn">
+                <!--单击按钮-->
+
+            </ul>
             <!--下拉菜单-->
             <ul>
                 <li><a href="#">手机&nbsp;电话卡</a></li>
@@ -181,11 +196,10 @@
 
     <!--footer-->
     <div class="footer">
-        <div>
-            <h2>小米闪购</h2>
-                    <a href="#">》</a>
-
-                    <a href="#">《</a>
+        <div class="seckill">
+                    <h2>小米闪购</h2>
+                    <a href="javascript:void(0)" class="right_move">》</a>
+                    <a href="javascript:void(0)" class="left_move">《</a>
         </div>
         <!--小米闪购的商品展示列表        -->
         <div>
@@ -201,7 +215,7 @@
                     <a class="ss"></a>
                </div>
             </div>
-            <div>
+            <div class="seckill_item">
                 <ul >
                     <li style="margin-left: 0" class="shop">
                         <a href="#"><img  class="shop_img"/>
@@ -259,7 +273,34 @@
                             <p class="shop_price">799</p>
                         </a>
                     </li>
-
+                    <li  class="shop">
+                        <a href="#"><img  class="shop_img"/>
+                            <p class="shop_name">米兔儿童手表9</p>
+                            <p class="shop_info">8天超长待机,AI双摄高清视频通话</p>
+                            <p class="shop_price">799</p>
+                        </a>
+                    </li>
+                    <li  class="shop">
+                        <a href="#"><img  class="shop_img"/>
+                            <p class="shop_name">米兔儿童手表10</p>
+                            <p class="shop_info">8天超长待机,AI双摄高清视频通话</p>
+                            <p class="shop_price">799</p>
+                        </a>
+                    </li>
+                    <li  class="shop">
+                        <a href="#"><img  class="shop_img"/>
+                            <p class="shop_name">米兔儿童手表11</p>
+                            <p class="shop_info">8天超长待机,AI双摄高清视频通话</p>
+                            <p class="shop_price">799</p>
+                        </a>
+                    </li>
+                    <li style="margin-right: 0" class="shop">
+                        <a href="#"><img  class="shop_img"/>
+                            <p class="shop_name">米兔儿童手表12</p>
+                            <p class="shop_info">8天超长待机,AI双摄高清视频通话</p>
+                            <p class="shop_price">799</p>
+                        </a>
+                    </li>
 
                 </ul >
             </div>
@@ -545,5 +586,70 @@
         </ul>
         <p>高校毕业设计 版权所有&copy;钱旺</p>
     </div>
+
+        <!--侧边栏
+
+        -->
+        <ul class="sidebar">
+            <li>
+                <span class="iconfont">&#xe64d;</span>
+                <p>手机APP</p>
+            </li>
+            <li>
+                <span class="iconfont">&#xe64d;</span>
+                <p>手机APP</p>
+            </li>
+            <li>
+                <span class="iconfont">&#xe64d;</span>
+                <p>手机APP</p>
+            </li>
+            <li>
+                <span class="iconfont">&#xe64d;</span>
+                <p>手机APP</p>
+            </li>
+            <li>
+                <span class="iconfont">&#xe64d;</span>
+                <p>手机APP</p>
+            </li>
+        </ul>
+
+<!--注册模态框-->
+        <form>
+        <!-- 模态框 -->
+        <div class="modal fade" id="register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- 模态框头部 -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">注册</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- 模态框主体 -->
+                    <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+
+
+                    </div>
+
+                    <!-- 模态框底部 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">注册 </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </form>
 </body>
 </html>
